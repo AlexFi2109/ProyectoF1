@@ -45,11 +45,12 @@ MonoBehaviour:
   animator: {fileID: 1730821172692282974}
   timeToShoot: 1
   energy: 100
-  shootForce: 100
+  shootForce: 1500
   energyNeededToShoot: 1
   shootPoint: {fileID: 1828553122}
-  prefabToShoot: {fileID: 369992661461250041, guid: e0055387ace90c24ab31235fd55daa91,
+  prefabToShoot: {fileID: 5447956577780036889, guid: 153f2321152c31643a29118387b6ad0d,
     type: 3}
+  arco: {fileID: 1824425031142384862}
 --- !u!1001 &6324817354316552248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -115,7 +116,7 @@ PrefabInstance:
     - target: {fileID: 5663253690074610918, guid: 0d110146cd7e629489f972e991b60050,
         type: 3}
       propertyPath: m_Name
-      value: ArcoPrefab
+      value: ArcoPrefab Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5747542484788967014, guid: 0d110146cd7e629489f972e991b60050,
         type: 3}
