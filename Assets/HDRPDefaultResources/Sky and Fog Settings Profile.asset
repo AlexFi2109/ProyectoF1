@@ -66,7 +66,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: 1
-  m_AdvancedMode: 0
+  m_AdvancedMode: 1
   enabled:
     m_OverrideState: 1
     m_Value: 1
@@ -81,13 +81,13 @@ MonoBehaviour:
     showEyeDropper: 1
   tint:
     m_OverrideState: 1
-    m_Value: {r: 1, g: 1, b: 1, a: 1}
+    m_Value: {r: 16, g: 16, b: 16, a: 1}
     hdr: 1
     showAlpha: 0
     showEyeDropper: 1
   maxFogDistance:
     m_OverrideState: 1
-    m_Value: 50.3
+    m_Value: 90
     min: 0
   mipFogMaxMip:
     m_OverrideState: 0
@@ -104,10 +104,10 @@ MonoBehaviour:
     min: 0
   baseHeight:
     m_OverrideState: 1
-    m_Value: 52.8
+    m_Value: -17.2
   maximumHeight:
     m_OverrideState: 1
-    m_Value: 66
+    m_Value: 72.9
   albedo:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
@@ -116,7 +116,7 @@ MonoBehaviour:
     showEyeDropper: 1
   meanFreePath:
     m_OverrideState: 1
-    m_Value: 27
+    m_Value: 1.4
     min: 1
   enableVolumetricFog:
     m_OverrideState: 1
@@ -132,8 +132,8 @@ MonoBehaviour:
     min: 0
     max: 1
   depthExtent:
-    m_OverrideState: 0
-    m_Value: 64
+    m_OverrideState: 1
+    m_Value: 38.5
     min: 0.1
   sliceDistributionUniformity:
     m_OverrideState: 0
