@@ -19,7 +19,7 @@ public class MonsterScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.rotation = Quaternion.Euler(0, 0, 0);
         contador += Time.deltaTime;
         if(contador > 4)
         {

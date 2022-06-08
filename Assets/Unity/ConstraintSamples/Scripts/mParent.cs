@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.Animations.Rigging;
+//using UnityEngine.Animations.Rigging;
 
 public class mParent : MonoBehaviour
 {
@@ -19,13 +19,13 @@ public class mParent : MonoBehaviour
     {
         if (m_Mode != Mode.Idle)
         {
-            var constraint = mParentCon.GetComponent<MultiParentConstraint>();
-            var sourceObjects = constraint.data.sourceObjects;
+            //var constraint = mParentCon.GetComponent<MultiParentConstraint>();
+            //var sourceObjects = constraint.data.sourceObjects;
 
-            sourceObjects.SetWeight(0, m_Mode == Mode.Ground ? 1f : 0f);
-            sourceObjects.SetWeight(1, m_Mode == Mode.Hand ? 1f : 0f);
-            sourceObjects.SetWeight(2, m_Mode == Mode.Back ? 1f : 0f);
-            constraint.data.sourceObjects = sourceObjects;
+            //sourceObjects.SetWeight(0, m_Mode == Mode.Ground ? 1f : 0f);
+            //sourceObjects.SetWeight(1, m_Mode == Mode.Hand ? 1f : 0f);
+            //sourceObjects.SetWeight(2, m_Mode == Mode.Back ? 1f : 0f);
+            //constraint.data.sourceObjects = sourceObjects;
 
             m_Mode = Mode.Idle;
         }

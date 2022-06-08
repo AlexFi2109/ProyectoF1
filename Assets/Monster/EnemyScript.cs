@@ -8,20 +8,24 @@ public class EnemyScript : MonoBehaviour
     public float contador;
     public Animator animator;
     public float danoPunch, danoFlip, danoPunch2, danoSlash, danoJump, danoRoar, vida;
-    public float damageArrow, damageSword;
+    public float damageArrow, damageSword, speed;
 
     public GameObject objetivo;
 
     // Start is called before the first frame update
     void Start()
     {
+
         animator = GetComponent<Animator>();
         objetivo = GameObject.Find("Xaya");
+        
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        transform.rotation = Quaternion.Euler(0, 0, 0);
         if (vida <= 0)
         {
             animator.SetBool("AttackPunch", false);
@@ -31,10 +35,20 @@ public class EnemyScript : MonoBehaviour
             animator.SetBool("AttackJump", false);
             animator.SetBool("Walk", false);
             animator.SetBool("Reaction", false);
-            animator.SetBool("Death", true);            
-           // Destroy(gameObject);
+            animator.SetBool("Death", true);
+            // Destroy(gameObject);
 
         }
+        else if(Vector3.Distance(transform.position, objetivo.transform.position)<50)
+        {
+            var lookPos = objetivo.transform.position - transform.position;
+            lookPos.y = 0;
+            var rotation = Quaternion.LookRotation(lookPos);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, rotation, 360);
+            transform.position = Vector3.MoveTowards(transform.position,objetivo.transform.position, speed*Time.deltaTime);
+        }
+        //transform.position = Vector3.MoveTowards(transform.position, objetivo.transform.position, speed * Time.deltaTime);
+
 
     }
 
