@@ -58,7 +58,7 @@ GameObject:
   - component: {fileID: -1090014756579755639}
   m_Layer: 0
   m_Name: FlechaPrefab Variant
-  m_TagString: Untagged
+  m_TagString: Arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,8 +103,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5447956577780036889}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 0.060058594, y: 0.7215308, z: 0.07902547}
   m_Center: {x: -0.0020446777, y: 0.2511626, z: 0.0012924299}
@@ -120,6 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a493016453011b74dae6b420fd1c68db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  h: 0
+  damageArrow: 20
+  monster: {fileID: 5589321399023702084, guid: 3c809648400e44749a1ebb715f7d00ff, type: 3}
 --- !u!1 &5447956578412597867
 GameObject:
   m_ObjectHideFlags: 0

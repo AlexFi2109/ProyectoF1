@@ -33,12 +33,14 @@ public class ArcoScript : MonoBehaviour
         {
             shootedPrefab = Instantiate(prefabToShoot, shootPoint.transform.position, shootPoint.transform.rotation);
             a = 1;
+            shootedPrefab.GetComponent<BoxCollider>().enabled = false;
             animator.SetBool("Apunta", true);
             animator.SetBool("Dispara", false);
             shootedPrefab.transform.parent = arco.transform;
         }
         if (counter >= timeToShoot + 0.15 && Input.GetButtonDown("Fire2") && energy >= energyNeededToShoot)
         {
+            shootedPrefab.GetComponent<BoxCollider>().enabled = true;
             shootedPrefab.GetComponent<Rigidbody>().useGravity = true;
             counter = 0;
             energy -= energyNeededToShoot;

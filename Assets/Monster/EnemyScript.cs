@@ -8,6 +8,7 @@ public class EnemyScript : MonoBehaviour
     public float contador;
     public Animator animator;
     public float danoPunch, danoFlip, danoPunch2, danoSlash, danoJump, danoRoar, vida;
+    public float damageArrow, damageSword;
 
     public GameObject objetivo;
 
@@ -30,21 +31,32 @@ public class EnemyScript : MonoBehaviour
             animator.SetBool("AttackJump", false);
             animator.SetBool("Walk", false);
             animator.SetBool("Reaction", false);
-            animator.SetBool("Death", true);
-            contador = 0;
-            contador += Time.deltaTime;
-            if (contador >= 3)
-            {
-                Destroy(gameObject);
-            }
+            animator.SetBool("Death", true);            
+           // Destroy(gameObject);
 
         }
 
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Arrow") )
+        {
+            
+            vida -= damageArrow/2;
+            //Destroy(gameObject, 1f);
+        }
+              
+    }
+
     private void OnTriggerStay(Collider other)
     {
-        Ataque();
+        if (other.CompareTag("Player"))
+        {
+
+            Ataque();
+        }
+        
     }
 
     private void OnTriggerExit(Collider other)
@@ -124,7 +136,7 @@ public class EnemyScript : MonoBehaviour
     {
         vida = vida - danoRecibido;
         
-        if(danoRecibido >= 50) //El valor puede aumentar dependiendo 
+        if(danoRecibido >= 25) //El valor puede aumentar dependiendo 
         {
             
             animator.SetBool("AttackPunch", false);
@@ -134,10 +146,11 @@ public class EnemyScript : MonoBehaviour
             animator.SetBool("AttackJump", false);
             animator.SetBool("Walk", false);
             animator.SetBool("Reaction", true);
-        }
-        
-
+        }        
     }
-
+    private IEnumerator Esperar(int s)
+    {
+        yield return new WaitForSeconds(s);
+    }
 }
 
