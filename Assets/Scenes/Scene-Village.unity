@@ -120,7 +120,7 @@ NavMeshSettings:
     accuratePlacement: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 03163827804cd6d48bd1079416203737, type: 2}
 --- !u!1001 &5854643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2502,6 +2502,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FPSController
+      objectReference: {fileID: 0}
+    - target: {fileID: 6482038842855788441, guid: 26d2f2c648fd32340a82001f16b6a788,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 6982683400528967583, guid: 26d2f2c648fd32340a82001f16b6a788,
         type: 3}
