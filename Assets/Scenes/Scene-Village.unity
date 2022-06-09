@@ -9763,6 +9763,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 480180251}
     m_Modifications:
+    - target: {fileID: 3570986080648941074, guid: 32ca26203c1fbe447897b6f2fe647e86,
+        type: 3}
+      propertyPath: damageArrow
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3570986080648941075, guid: 32ca26203c1fbe447897b6f2fe647e86,
         type: 3}
       propertyPath: brother

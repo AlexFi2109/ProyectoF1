@@ -39,7 +39,8 @@ public class EnemyScript : MonoBehaviour
             animator.SetBool("Death", true);
             controlAudio.PlayOneShot(audios[4], 0.5f); //Muerte
             controlAudio.mute = true;
-            // Destroy(gameObject);
+            GetComponent<FadeOutScript>().Explode(5);
+            StartCoroutine(Esperar(5));
 
         }
         else if(Vector3.Distance(transform.position, objetivo.transform.position)<50)
@@ -73,6 +74,7 @@ public class EnemyScript : MonoBehaviour
         {
 
             Ataque();
+            objetivo.GetComponent<PlayerHealthScript>().DamagePlayer(10);
             controlAudio.PlayOneShot(audios[2], 0.5f); //Ataque
         }
         
@@ -171,6 +173,7 @@ public class EnemyScript : MonoBehaviour
     private IEnumerator Esperar(int s)
     {
         yield return new WaitForSeconds(s);
+        gameObject.SetActive(false);
     }
 }
 

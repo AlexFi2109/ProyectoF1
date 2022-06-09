@@ -68,57 +68,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.3612783, y: 2.1917698, z: 3.7247658}
   m_Center: {x: -0.03267535, y: 1.307904, z: 0.43489915}
---- !u!95 &673752047
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3866737570687941068}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 0cb70803bf19f2946874fd4220f58135, type: 3}
-  m_Controller: {fileID: 9100000, guid: df0f4a90381266e49bc95480a1e791b0, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 1
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &673752046
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3866737570687941068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5346763827a2110499b18fc246e0e2ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  caso: 0
-  contador: 0
-  animator: {fileID: 673752047}
-  danoPunch: 0
-  danoFlip: 0
-  danoPunch2: 0
-  danoSlash: 0
-  danoJump: 0
-  danoRoar: 0
-  vida: 100
-  damageArrow: 5
-  damageSword: 2
-  speed: 4
-  objetivo: {fileID: 0}
-  audios:
-  - {fileID: 8300000, guid: 38dc60ac2df713144af73193124a4407, type: 3}
-  - {fileID: 8300000, guid: b552c3ebd51cdf24a8c93d6eddee2d8d, type: 3}
-  - {fileID: 8300000, guid: 97aa2f636f793824f84e35f304d14dd3, type: 3}
-  - {fileID: 8300000, guid: 65b43689e5bc85d4e89eb7877a1829b6, type: 3}
-  - {fileID: 8300000, guid: 091b028f830c079449495295cb4e4f6c, type: 3}
 --- !u!82 &425344680736298634
 AudioSource:
   m_ObjectHideFlags: 0
@@ -215,6 +164,74 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &673752047
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3866737570687941068}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: 0cb70803bf19f2946874fd4220f58135, type: 3}
+  m_Controller: {fileID: 9100000, guid: df0f4a90381266e49bc95480a1e791b0, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-2531211779405124074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3866737570687941068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce295f48190b5ea4584a62090bb0b3ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LifePoint: {fileID: 3429246873300701285, guid: a715a4fad65422f4c98a0c9940c10e31,
+    type: 3}
+  numberOfLP: 2
+  offset: {x: 0, y: 0, z: 0}
+  explosionParticles: {fileID: 100010, guid: c0a15d884e5e7a9468ab38bba8a32604, type: 3}
+--- !u!114 &673752046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3866737570687941068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5346763827a2110499b18fc246e0e2ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  caso: 0
+  contador: 0
+  animator: {fileID: 673752047}
+  danoPunch: 0
+  danoFlip: 0
+  danoPunch2: 0
+  danoSlash: 0
+  danoJump: 0
+  danoRoar: 0
+  vida: 100
+  damageArrow: 5
+  damageSword: 2
+  speed: 4
+  objetivo: {fileID: 0}
+  audios:
+  - {fileID: 8300000, guid: 38dc60ac2df713144af73193124a4407, type: 3}
+  - {fileID: 8300000, guid: b552c3ebd51cdf24a8c93d6eddee2d8d, type: 3}
+  - {fileID: 8300000, guid: 97aa2f636f793824f84e35f304d14dd3, type: 3}
+  - {fileID: 8300000, guid: 65b43689e5bc85d4e89eb7877a1829b6, type: 3}
+  - {fileID: 8300000, guid: 091b028f830c079449495295cb4e4f6c, type: 3}
 --- !u!65 &1817657727
 BoxCollider:
   m_ObjectHideFlags: 0
