@@ -5815,7 +5815,7 @@ GameObject:
   - component: {fileID: 1084500531}
   m_Layer: 0
   m_Name: CuboInvisible
-  m_TagString: Untagged
+  m_TagString: Txt5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6063,6 +6063,24 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 608097057}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1137825991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1137825990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f00c13d8a7e7e64a85d6662b6051615, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audios:
+  - {fileID: 8300000, guid: ff8005d4cd28b4547a59dc792afd62d2, type: 3}
+  - {fileID: 8300000, guid: bbf42b538ff7d99458e5bca2ab679cd1, type: 3}
+  - {fileID: 8300000, guid: f4ccea5a5293bd348985917946337873, type: 3}
+  - {fileID: 8300000, guid: 6bbef15cee47040418971dd5bff4f186, type: 3}
+  - {fileID: 8300000, guid: 8c73eafd1c75ec74f9a2055da0d36919, type: 3}
 --- !u!4 &1137825994 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7638620677688516619, guid: 26d2f2c648fd32340a82001f16b6a788,
@@ -6079,7 +6097,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ff8005d4cd28b4547a59dc792afd62d2, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1
