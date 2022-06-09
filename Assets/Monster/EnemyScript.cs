@@ -37,7 +37,7 @@ public class EnemyScript : MonoBehaviour
             animator.SetBool("Walk", false);
             animator.SetBool("Reaction", false);
             animator.SetBool("Death", true);
-            controlAudio.PlayOneShot(audios[1], 0.5f); //Muerte
+            controlAudio.PlayOneShot(audios[4], 0.5f); //Muerte
             // Destroy(gameObject);
 
         }
@@ -60,7 +60,7 @@ public class EnemyScript : MonoBehaviour
         {
             
             vida -= damageArrow/2;
-            controlAudio.PlayOneShot(audios[1], 0.5f); //Damage
+            controlAudio.PlayOneShot(audios[3], 0.5f); //Damage
             //Destroy(gameObject, 1f);
         }
               
@@ -72,7 +72,7 @@ public class EnemyScript : MonoBehaviour
         {
 
             Ataque();
-            controlAudio.PlayOneShot(audios[1], 0.5f); //Ataque
+            controlAudio.PlayOneShot(audios[2], 0.5f); //Ataque
         }
         
     }
@@ -85,7 +85,7 @@ public class EnemyScript : MonoBehaviour
         animator.SetBool("AttackSlash", false);
         animator.SetBool("AttackJump", false);
         animator.SetBool("Walk", true);
-        controlAudio.PlayOneShot(audios[1], 0.5f); //Caminando
+        controlAudio.PlayOneShot(audios[0], 0.5f); //Caminando
     }
 
     private void Ataque()
