@@ -113,6 +113,12 @@ MonoBehaviour:
   damageSword: 2
   speed: 4
   objetivo: {fileID: 0}
+  audios:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!65 &1817657727
 BoxCollider:
   m_ObjectHideFlags: 0

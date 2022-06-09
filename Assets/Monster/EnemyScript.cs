@@ -11,15 +11,16 @@ public class EnemyScript : MonoBehaviour
     public float damageArrow, damageSword, speed;
 
     public GameObject objetivo;
+    private AudioSource controlAudio;
+    [SerializeField] private AudioClip[] audios;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        controlAudio = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         objetivo = GameObject.Find("Xaya");
-        
-        
+        controlAudio.PlayOneShot(audios[1], 0.5f); //Grito
     }
 
     // Update is called once per frame
@@ -36,6 +37,7 @@ public class EnemyScript : MonoBehaviour
             animator.SetBool("Walk", false);
             animator.SetBool("Reaction", false);
             animator.SetBool("Death", true);
+            controlAudio.PlayOneShot(audios[1], 0.5f); //Muerte
             // Destroy(gameObject);
 
         }
@@ -58,6 +60,7 @@ public class EnemyScript : MonoBehaviour
         {
             
             vida -= damageArrow/2;
+            controlAudio.PlayOneShot(audios[1], 0.5f); //Damage
             //Destroy(gameObject, 1f);
         }
               
@@ -69,6 +72,7 @@ public class EnemyScript : MonoBehaviour
         {
 
             Ataque();
+            controlAudio.PlayOneShot(audios[1], 0.5f); //Ataque
         }
         
     }
@@ -81,6 +85,7 @@ public class EnemyScript : MonoBehaviour
         animator.SetBool("AttackSlash", false);
         animator.SetBool("AttackJump", false);
         animator.SetBool("Walk", true);
+        controlAudio.PlayOneShot(audios[1], 0.5f); //Caminando
     }
 
     private void Ataque()
