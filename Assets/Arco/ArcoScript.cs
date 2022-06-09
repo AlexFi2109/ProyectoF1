@@ -26,11 +26,13 @@ public class ArcoScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         counter += Time.deltaTime;
         counter2 += Time.deltaTime;
         
         if (counter >= timeToShoot && Input.GetButtonDown("Fire1") && energy >= energyNeededToShoot && a==0)
         {
+            GetComponent<AudioSource>().enabled = false;
             shootedPrefab = Instantiate(prefabToShoot, shootPoint.transform.position, shootPoint.transform.rotation);
             a = 1;
             shootedPrefab.GetComponent<BoxCollider>().enabled = false;
@@ -50,6 +52,7 @@ public class ArcoScript : MonoBehaviour
             shootedPrefab.GetComponent<Rigidbody>().AddRelativeForce(shootForce * Vector3.up);
             a = 0;
             h = shootedPrefab.GetComponent<Transform>().position.y;
+            GetComponent<AudioSource>().enabled = true;
         }
         if (h <= 0.1 && a == 0)
         {
