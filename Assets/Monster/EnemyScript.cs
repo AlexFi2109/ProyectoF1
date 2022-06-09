@@ -38,6 +38,7 @@ public class EnemyScript : MonoBehaviour
             animator.SetBool("Reaction", false);
             animator.SetBool("Death", true);
             controlAudio.PlayOneShot(audios[4], 0.5f); //Muerte
+            controlAudio.mute = true;
             // Destroy(gameObject);
 
         }

@@ -9,10 +9,13 @@ public class MonsterScript : MonoBehaviour
     public Animator animator;
     public int seleccionador;
 
+    private AudioSource controlAudio;
+    [SerializeField] private AudioClip[] audios;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        controlAudio = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
     }
 
