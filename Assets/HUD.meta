@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/HUD.meta
 guid: 98bbef5e1cf50ed4590ca0f3620ad6c1
+========
+guid: d4d565aca720b0748985ed912253c272
+>>>>>>>> 8428800ed85aa20b56d0702666a4b4d10c66cafe:Assets/Unity/ConstraintSamples/Scripts.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
