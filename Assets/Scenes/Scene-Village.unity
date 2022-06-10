@@ -7229,6 +7229,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1137825994}
     m_Modifications:
+    - target: {fileID: 1682469354, guid: d2e242fa9f4e3e94a8062732abae2fb1, type: 3}
+      propertyPath: energyNeededToShoot
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 1821665477934759274, guid: d2e242fa9f4e3e94a8062732abae2fb1,
         type: 3}
       propertyPath: m_RootOrder
@@ -10116,7 +10120,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playersHealth: 100
+  energy: 100
   lifeBar: {fileID: 1593289099}
+  energyBar: {fileID: 1632386861}
   healClip: {fileID: 8300000, guid: 0e6cf2bc4cee4f24493ceac28a081ea5, type: 3}
   hitClips:
   - {fileID: 8300000, guid: d99c88c394fa747d58a3509466456df5, type: 3}
@@ -10708,6 +10714,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 6154246294930765279, guid: 29d4fee25493e16489577b3103a6ab19, type: 3}
+--- !u!114 &1632386861 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2312945811013750175, guid: 3b15c71d7b0492c4b95da5038bf90c1a,
+    type: 3}
+  m_PrefabInstance: {fileID: 734419992}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1635512025
 PrefabInstance:
   m_ObjectHideFlags: 0
