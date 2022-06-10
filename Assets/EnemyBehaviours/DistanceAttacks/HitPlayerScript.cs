@@ -9,7 +9,7 @@ public class HitPlayerScript : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             collision.gameObject.GetComponent<PlayerHealthScript>().DamagePlayer(damageToPlayer);
-            Destroy(gameObject);
         }
+        Destroy(gameObject);
     }
 }
