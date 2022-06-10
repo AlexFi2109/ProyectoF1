@@ -10134,7 +10134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8bcf56e26b39d740ad3386d24d79a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playersHealth: 300
+  playersHealth: 100
   energy: 100
   lifeBar: {fileID: 1593289099}
   energyBar: {fileID: 1632386861}
