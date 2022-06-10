@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    public int caso, damage;
+    public int caso;
+    public float contador;
     public Animator animator;
-    public float contador, vida, damageArrow, damageSword, speed;
-    
+    public float danoPunch, danoFlip, danoPunch2, danoSlash, danoJump, danoRoar, vida;
+    public float damageArrow, damageSword, speed;
 
     public GameObject objetivo;
-    public GameObject puerta;
     private AudioSource controlAudio;
-    private int a=0;
     [SerializeField] private AudioClip[] audios;
 
     // Start is called before the first frame update
@@ -21,7 +20,6 @@ public class EnemyScript : MonoBehaviour
         controlAudio = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         objetivo = GameObject.Find("Xaya");
-        puerta = GameObject.Find("Gate");
         controlAudio.PlayOneShot(audios[1], 0.5f); //Grito
     }
 
@@ -29,17 +27,8 @@ public class EnemyScript : MonoBehaviour
     void Update()
     {
         transform.rotation = Quaternion.Euler(0, 0, 0);
-        
-        if(vida <= 50 && a==0)
-        {
-            a = 1;
-            speed *= 1.5f;
-            damage *= 2;
-        }
-        
         if (vida <= 0)
         {
-            puerta.GetComponent<DestroyGateScript>().destroygate = true;
             animator.SetBool("AttackPunch", false);
             animator.SetBool("AttackFlip", false);
             animator.SetBool("AttackPunch2", false);
@@ -49,10 +38,8 @@ public class EnemyScript : MonoBehaviour
             animator.SetBool("Reaction", false);
             animator.SetBool("Death", true);
             controlAudio.PlayOneShot(audios[4], 0.5f); //Muerte
-            
-            GetComponent<FadeOutScript>().Explode(5);
-            StartCoroutine(Esperar(5));
-            
+            controlAudio.mute = true;
+            // Destroy(gameObject);
 
         }
         else if(Vector3.Distance(transform.position, objetivo.transform.position)<50)
@@ -77,15 +64,7 @@ public class EnemyScript : MonoBehaviour
             controlAudio.PlayOneShot(audios[3], 0.5f); //Damage
             //Destroy(gameObject, 1f);
         }
-        else if (other.CompareTag("Player"))
-        {
-
-            Ataque();
-
-            controlAudio.PlayOneShot(audios[2], 0.5f); //Ataque
-            StartCoroutine(Esperar2(3));
-        }
-
+              
     }
 
     private void OnTriggerStay(Collider other)
@@ -95,7 +74,6 @@ public class EnemyScript : MonoBehaviour
 
             Ataque();
             controlAudio.PlayOneShot(audios[2], 0.5f); //Ataque
-            
         }
         
     }
@@ -109,21 +87,12 @@ public class EnemyScript : MonoBehaviour
         animator.SetBool("AttackJump", false);
         animator.SetBool("Walk", true);
         controlAudio.PlayOneShot(audios[0], 0.5f); //Caminando
-        
-        if (other.CompareTag("Player"))
-        {
-
-            Ataque();
-            
-            controlAudio.PlayOneShot(audios[2], 0.5f); //Ataque
-            StartCoroutine(Esperar2(3));
-        }
     }
 
     private void Ataque()
     {
         contador += Time.deltaTime;
-        if (contador >= 0.5f)
+        if (contador >= 1.5)
         {
             caso = Random.Range(1, 6);
             contador = 0;
@@ -137,7 +106,6 @@ public class EnemyScript : MonoBehaviour
                 animator.SetBool("AttackSlash", false);
                 animator.SetBool("AttackJump", false);
                 animator.SetBool("Walk", true);
-                
                 break;
 
             case 1:
@@ -147,7 +115,6 @@ public class EnemyScript : MonoBehaviour
                 animator.SetBool("AttackSlash", false);
                 animator.SetBool("AttackJump", false);
                 animator.SetBool("Walk", false);
-                
                 break;
 
             case 2:
@@ -157,7 +124,6 @@ public class EnemyScript : MonoBehaviour
                 animator.SetBool("AttackSlash", false);
                 animator.SetBool("AttackJump", false);
                 animator.SetBool("Walk", false);
-                
                 break;
             case 3:
                 animator.SetBool("AttackPunch", false);
@@ -166,7 +132,6 @@ public class EnemyScript : MonoBehaviour
                 animator.SetBool("AttackSlash", false);
                 animator.SetBool("AttackJump", false);
                 animator.SetBool("Walk", false);
-                
                 break;
             case 4:
                 animator.SetBool("AttackPunch", false);
@@ -175,7 +140,6 @@ public class EnemyScript : MonoBehaviour
                 animator.SetBool("AttackSlash", true);
                 animator.SetBool("AttackJump", false);
                 animator.SetBool("Walk", false);
-                
                 break;
             case 5:
                 animator.SetBool("AttackPunch", false);
@@ -184,7 +148,6 @@ public class EnemyScript : MonoBehaviour
                 animator.SetBool("AttackSlash", false);
                 animator.SetBool("AttackJump", true);
                 animator.SetBool("Walk", false);
-                
                 break;
         }
     }
@@ -208,14 +171,6 @@ public class EnemyScript : MonoBehaviour
     private IEnumerator Esperar(int s)
     {
         yield return new WaitForSeconds(s);
-        controlAudio.mute = true;
-        gameObject.SetActive(false);
     }
-    private IEnumerator Esperar2(int s)
-    {
-        objetivo.GetComponent<PlayerHealthScript>().DamagePlayer(damage);
-        yield return new WaitForSeconds(s+1);        
-    }
-
 }
 

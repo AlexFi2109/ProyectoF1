@@ -2,7 +2,7 @@
 
 public class EnemyHealthScript : MonoBehaviour
 {
-    public int enemyHealth = 100, damageArrow;
+    public int enemyHealth = 100;
     void Start()
     {
         
@@ -16,17 +16,6 @@ public class EnemyHealthScript : MonoBehaviour
         {
             //Destroy(gameObject);
         }
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Arrow"))
-        {
-
-            enemyHealth -= damageArrow;
-            
-        }
-
     }
 
     void Update()

@@ -9,16 +9,6 @@ TagManager:
   - ArmMonster
   - HeadMonster
   - Arrow
-  - Attack
-  - Enemy
-  - LifePoint
-  - Txt1
-  - Txt2
-  - Txt3
-  - Txt4
-  - Txt5
-  - Txt6
-  - Gate
   layers:
   - Default
   - TransparentFX
