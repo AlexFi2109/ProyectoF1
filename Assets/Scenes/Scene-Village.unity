@@ -375,7 +375,6 @@ GameObject:
   - component: {fileID: 37612745}
   - component: {fileID: 37612744}
   - component: {fileID: 37612743}
-  - component: {fileID: 37612742}
   m_Layer: 0
   m_Name: CuboInvisible2
   m_TagString: Txt6
@@ -397,21 +396,6 @@ Transform:
   m_Father: {fileID: 720883091}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 36.677002, z: 0}
---- !u!114 &37612742
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 37612740}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a16bc3860de3bd4babd9a1383cfdcce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  monsterPrefab: {fileID: 3866737570687941068, guid: 53a0fd6c07b29dc4ab0abbf3b9e71d7c,
-    type: 3}
-  monsterSpawnPoint: {fileID: 530868051}
 --- !u!65 &37612743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -969,8 +953,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: 0.7}
-  m_SizeDelta: {x: 560.9, y: 106.49708}
+  m_AnchoredPosition: {x: -6.8302, y: 0}
+  m_SizeDelta: {x: 567.31946, y: 123.567894}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &88779187
 MonoBehaviour:
@@ -993,11 +977,11 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 1
+    m_FontSize: 24
     m_FontStyle: 3
     m_BestFit: 0
-    m_MinSize: 1
-    m_MaxSize: 40
+    m_MinSize: 0
+    m_MaxSize: 100
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1998,10 +1982,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 1
+    m_FontSize: 24
     m_FontStyle: 3
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -8150,7 +8134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1404362322
 RectTransform:
   m_ObjectHideFlags: 0
