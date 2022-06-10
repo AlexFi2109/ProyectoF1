@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class ArcoScript : MonoBehaviour
@@ -7,20 +8,23 @@ public class ArcoScript : MonoBehaviour
     public Animator animator;
     private float counter,counter2;
     public float timeToShoot;
-    public float energy;
+    //public float energy;
     public float shootForce;
-    public float energyNeededToShoot;
+    public int energyNeededToShoot;
+    public int energy;
+    
     public GameObject shootPoint;
     public GameObject prefabToShoot;
     public GameObject arco;
     private GameObject shootedPrefab;
+    public GameObject player;
     private int a=0; //Condicion para que no genere dos flechas encimadas
     private float h;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -29,7 +33,8 @@ public class ArcoScript : MonoBehaviour
         
         counter += Time.deltaTime;
         counter2 += Time.deltaTime;
-        
+        energy = player.GetComponent<PlayerHealthScript>().energy;
+
         if (counter >= timeToShoot && Input.GetButtonDown("Fire1") && energy >= energyNeededToShoot && a==0)
         {
             GetComponent<AudioSource>().enabled = false;
@@ -45,7 +50,7 @@ public class ArcoScript : MonoBehaviour
             shootedPrefab.GetComponent<BoxCollider>().enabled = true;
             shootedPrefab.GetComponent<Rigidbody>().useGravity = true;
             counter = 0;
-            energy -= energyNeededToShoot;
+            player.GetComponent<PlayerHealthScript>().Disparo(energyNeededToShoot);
             animator.SetBool("Apunta", false);
             animator.SetBool("Dispara", true);
             counter2 = 0;
@@ -59,6 +64,7 @@ public class ArcoScript : MonoBehaviour
             Destroy(shootedPrefab);
             counter2 = 0;
         }
+        
 
     }
     private void Shoot()

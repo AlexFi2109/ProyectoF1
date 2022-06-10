@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class PlayerHealthScript : MonoBehaviour
 {
     public int playersHealth = 100;
+    public int energy = 100;
     public Image lifeBar;
+    public Image energyBar;
     public AudioClip healClip;
     public AudioClip[] hitClips;
     public GameObject deadImage;
@@ -17,6 +19,15 @@ public class PlayerHealthScript : MonoBehaviour
     {
         audioSource = GetComponent<AudioSource>();
         lifeBar.fillAmount = (float)playersHealth / 100f;
+        energyBar.fillAmount = (float)energy / 100f;
+    }
+
+
+
+    public void Disparo(int energyUsed)
+    {
+        energy -= energyUsed;
+        energyBar.fillAmount = (float)energy / 100f;
     }
 
     public void DamagePlayer(int damageToPlayer)
@@ -44,6 +55,9 @@ public class PlayerHealthScript : MonoBehaviour
         playersHealth = Mathf.Clamp(playersHealth,0, 100);
         audioSource.PlayOneShot(healClip);
         lifeBar.fillAmount = (float)playersHealth / 100f;
+
+        energy += heal;
+        energyBar.fillAmount = (float)energy / 100f;
     }
 
     private IEnumerator DelaySceneChange()
