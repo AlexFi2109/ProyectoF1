@@ -216,8 +216,8 @@ MonoBehaviour:
   damage: 1
   animator: {fileID: 673752047}
   contador: 0
-  vida: 100
-  damageArrow: 5
+  vida: 60
+  damageArrow: 10
   damageSword: 2
   speed: 4
   objetivo: {fileID: 0}
