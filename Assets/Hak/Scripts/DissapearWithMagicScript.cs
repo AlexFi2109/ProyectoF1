@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DissapearWithMagicScript : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class DissapearWithMagicScript : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         Instantiate(explosionParticles, transform.position + offset, Quaternion.identity);
+        SceneManager.LoadScene("CreditsScene", LoadSceneMode.Single);
         Destroy(gameObject);
     }
 }
