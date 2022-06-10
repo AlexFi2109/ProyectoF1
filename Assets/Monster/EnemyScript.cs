@@ -48,7 +48,7 @@ public class EnemyScript : MonoBehaviour
             animator.SetBool("Walk", false);
             animator.SetBool("Reaction", false);
             animator.SetBool("Death", true);
-            controlAudio.PlayOneShot(audios[4], 0.5f); //Muerte
+            controlAudio.PlayOneShot(audios[4], 0.3f); //Muerte
             controlAudio.mute = true;
             GetComponent<FadeOutScript>().Explode(5);
             StartCoroutine(Esperar(5));
@@ -74,7 +74,7 @@ public class EnemyScript : MonoBehaviour
         {
             
             vida -= damageArrow/2;
-            controlAudio.PlayOneShot(audios[3], 0.5f); //Damage
+            controlAudio.PlayOneShot(audios[3], 0.4f); //Damage
             //Destroy(gameObject, 1f);
         }
         else if (other.CompareTag("Player"))
@@ -82,7 +82,7 @@ public class EnemyScript : MonoBehaviour
 
             Ataque();
 
-            controlAudio.PlayOneShot(audios[2], 0.5f); //Ataque
+            controlAudio.PlayOneShot(audios[2], 0.4f); //Ataque
             StartCoroutine(Esperar2(3));
         }
 
@@ -94,7 +94,7 @@ public class EnemyScript : MonoBehaviour
         {
 
             Ataque();
-            controlAudio.PlayOneShot(audios[2], 0.5f); //Ataque
+            controlAudio.PlayOneShot(audios[2], 0.4f); //Ataque
             
         }
         
@@ -108,14 +108,14 @@ public class EnemyScript : MonoBehaviour
         animator.SetBool("AttackSlash", false);
         animator.SetBool("AttackJump", false);
         animator.SetBool("Walk", true);
-        controlAudio.PlayOneShot(audios[0], 0.5f); //Caminando
+        controlAudio.PlayOneShot(audios[0], 0.4f); //Caminando
         
         if (other.CompareTag("Player"))
         {
 
             Ataque();
             
-            controlAudio.PlayOneShot(audios[2], 0.5f); //Ataque
+            controlAudio.PlayOneShot(audios[2], 0.4f); //Ataque
             StartCoroutine(Esperar2(3));
         }
     }
