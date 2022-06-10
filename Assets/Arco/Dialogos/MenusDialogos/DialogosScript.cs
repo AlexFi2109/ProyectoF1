@@ -8,6 +8,8 @@ public class DialogosScript : MonoBehaviour
 
     public GameObject panel, player;
     public GameObject txt1, txt2, txt3, txt4, txt5;
+    [SerializeField] private AudioClip[] audios;
+    private AudioSource controlAudio;
 
     void Start()
     {
@@ -17,6 +19,9 @@ public class DialogosScript : MonoBehaviour
         txt3.SetActive(false);
         txt4.SetActive(false);
         txt5.SetActive(false);
+        player = GameObject.Find("Main Camera");
+        controlAudio = player.GetComponent<AudioSource>();
+        controlAudio.PlayOneShot(audios[0], 0.5f);
     }
 
     // Update is called once per frame
@@ -46,6 +51,7 @@ public class DialogosScript : MonoBehaviour
             txt4.SetActive(false);
             txt5.SetActive(false);
             StartCoroutine(Esperar(4));
+            controlAudio.PlayOneShot(audios[1], 0.5f);
         }
         else if (other.CompareTag("Txt3"))
         {
@@ -56,6 +62,7 @@ public class DialogosScript : MonoBehaviour
             txt4.SetActive(false);
             txt5.SetActive(false);
             StartCoroutine(Esperar(4));
+            controlAudio.PlayOneShot(audios[2], 0.5f);
         }
         else if (other.CompareTag("Txt4"))
         {
@@ -67,7 +74,17 @@ public class DialogosScript : MonoBehaviour
             txt5.SetActive(false);
             StartCoroutine(Esperar2(6));
                         
-        }       
+        }
+        else if (other.CompareTag("Txt5"))
+        {
+            controlAudio.PlayOneShot(audios[3], 0.5f);
+
+        }
+        else if (other.CompareTag("Txt6"))
+        {
+            controlAudio.PlayOneShot(audios[4], 0.5f);
+
+        }
         else if (Input.GetKeyDown("r"))
         {
             panel.SetActive(false);

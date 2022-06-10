@@ -519,8 +519,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 46262950}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -9649,6 +9649,12 @@ MonoBehaviour:
   txt3: {fileID: 1115600065}
   txt4: {fileID: 88779185}
   txt5: {fileID: 348237618}
+  audios:
+  - {fileID: 8300000, guid: ff8005d4cd28b4547a59dc792afd62d2, type: 3}
+  - {fileID: 8300000, guid: bbf42b538ff7d99458e5bca2ab679cd1, type: 3}
+  - {fileID: 8300000, guid: f4ccea5a5293bd348985917946337873, type: 3}
+  - {fileID: 8300000, guid: 6bbef15cee47040418971dd5bff4f186, type: 3}
+  - {fileID: 8300000, guid: 8c73eafd1c75ec74f9a2055da0d36919, type: 3}
 --- !u!1 &1544050732
 GameObject:
   m_ObjectHideFlags: 0
@@ -10527,7 +10533,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Xaya: Acabo de derrotar a un esqueleto, definitivamente eso no fue normal...'
+  m_Text: 'Xaya: Acabo de derrotar a esa cosa, definitivamente eso no fue normal...'
 --- !u!222 &1662755917
 CanvasRenderer:
   m_ObjectHideFlags: 0
