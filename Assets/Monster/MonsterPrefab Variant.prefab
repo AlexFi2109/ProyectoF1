@@ -127,6 +127,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-5772165567752023932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5589321399023702084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce295f48190b5ea4584a62090bb0b3ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LifePoint: {fileID: 3429246873300701285, guid: a715a4fad65422f4c98a0c9940c10e31,
+    type: 3}
+  numberOfLP: 1
+  offset: {x: 0, y: 0, z: 0}
+  explosionParticles: {fileID: 100010, guid: c0a15d884e5e7a9468ab38bba8a32604, type: 3}
 --- !u!114 &902369930
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,8 +168,10 @@ MonoBehaviour:
   vida: 0
   damageArrow: 1
   damageSword: 2
+  speed: 0
   objetivo: {fileID: 6482038842855788441, guid: 26d2f2c648fd32340a82001f16b6a788,
     type: 3}
+  audios: []
 --- !u!65 &63655667
 BoxCollider:
   m_ObjectHideFlags: 0

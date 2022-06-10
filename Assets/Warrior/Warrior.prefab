@@ -1581,6 +1581,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 100
+  damageArrow: 10
 --- !u!114 &508651052681329942
 MonoBehaviour:
   m_ObjectHideFlags: 0

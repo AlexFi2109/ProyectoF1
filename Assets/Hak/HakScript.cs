@@ -17,7 +17,7 @@ public class HakScript : MonoBehaviour
     public int damageToPlayer;
     public float minSpeed;
     public float maxSpeed;
-    public float timeToExplode = 3f;
+    public float timeToExplode = 4f;
     public GameObject spawnPoint;
     public GameObject particlePrefab;
     public AudioClip[] stepClips;
@@ -47,6 +47,7 @@ public class HakScript : MonoBehaviour
     private void Update()
     {
         int health = GetComponent<EnemyHealthScript>().enemyHealth;
+        
 
         if (health <= 0 && !hasDied)
         {
