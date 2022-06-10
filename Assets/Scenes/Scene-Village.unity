@@ -375,6 +375,7 @@ GameObject:
   - component: {fileID: 37612745}
   - component: {fileID: 37612744}
   - component: {fileID: 37612743}
+  - component: {fileID: 37612742}
   m_Layer: 0
   m_Name: CuboInvisible2
   m_TagString: Txt6
@@ -396,6 +397,21 @@ Transform:
   m_Father: {fileID: 720883091}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 36.677002, z: 0}
+--- !u!114 &37612742
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37612740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a16bc3860de3bd4babd9a1383cfdcce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monsterPrefab: {fileID: 3866737570687941068, guid: 53a0fd6c07b29dc4ab0abbf3b9e71d7c,
+    type: 3}
+  monsterSpawnPoint: {fileID: 530868051}
 --- !u!65 &37612743
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2689,30 +2705,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534100002}
     m_Modifications:
-    - target: {fileID: 7037491304339141522, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7037491304339141522, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
-        type: 3}
-      propertyPath: m_Constraints
-      value: 80
-      objectReference: {fileID: 0}
     - target: {fileID: 7359031819138439428, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
         type: 3}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359031819138439428, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2577999
-      objectReference: {fileID: 0}
-    - target: {fileID: 7359031819138439428, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1.2577999
       objectReference: {fileID: 0}
     - target: {fileID: 7359031819138439428, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
         type: 3}
@@ -3115,11 +3111,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534100002}
     m_Modifications:
-    - target: {fileID: 7037491304339141522, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7037491304339141522, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
         type: 3}
       propertyPath: m_Constraints
@@ -4126,11 +4117,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 534100002}
     m_Modifications:
-    - target: {fileID: 7037491304339141522, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7359031819138439428, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
         type: 3}
       propertyPath: m_RootOrder
@@ -9796,11 +9782,6 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7037491304339141522, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
         type: 3}
-      propertyPath: m_UseGravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7037491304339141522, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
-        type: 3}
       propertyPath: m_Constraints
       value: 80
       objectReference: {fileID: 0}
@@ -11825,11 +11806,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.010124164
-      objectReference: {fileID: 0}
-    - target: {fileID: 7037491304339141522, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
-        type: 3}
-      propertyPath: m_UseGravity
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7037491304339141522, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
         type: 3}
