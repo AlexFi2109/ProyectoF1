@@ -5,6 +5,7 @@ using UnityEngine;
 public class PatrolRunAndAttackFirstEnemyScript : MonoBehaviour
 {
     public int rutina;
+    public int startPursuitRange;
     
     public float timer; //Cronometro
     public float grade; //Grado del ángulo    
@@ -50,8 +51,9 @@ public class PatrolRunAndAttackFirstEnemyScript : MonoBehaviour
     public void BehaviourEnemy()
     {
 
-        if (Vector3.Distance(transform.position, target.transform.position) > 5)
+        if (Vector3.Distance(transform.position, target.transform.position) > startPursuitRange)
         {
+            
             anim.SetBool("Run", false); //Cancela animación de correr
             timer += 1 * Time.deltaTime;
             if (timer >= 4)
