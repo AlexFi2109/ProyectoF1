@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: abffb5ba45d2dd4469920fe45b2fe177
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Army of Darkness
+  fontNames:
+  - Army of Darkness
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f89241a37a1fab04284d49e104d790a9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
