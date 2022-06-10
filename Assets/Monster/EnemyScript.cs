@@ -46,7 +46,7 @@ public class EnemyScript : MonoBehaviour
             animator.SetBool("Reaction", false);
             animator.SetBool("Death", true);
             controlAudio.PlayOneShot(audios[4], 0.5f); //Muerte
-            controlAudio.mute = true;
+            
             GetComponent<FadeOutScript>().Explode(5);
             StartCoroutine(Esperar(5));
 
@@ -204,6 +204,7 @@ public class EnemyScript : MonoBehaviour
     private IEnumerator Esperar(int s)
     {
         yield return new WaitForSeconds(s);
+        controlAudio.mute = true;
         gameObject.SetActive(false);
     }
     private IEnumerator Esperar2(int s)

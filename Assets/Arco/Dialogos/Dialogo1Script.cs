@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Dialogo1Script : MonoBehaviour
 {
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +21,7 @@ public class Dialogo1Script : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+
             StartCoroutine(Esperar(4));
         }
     }
