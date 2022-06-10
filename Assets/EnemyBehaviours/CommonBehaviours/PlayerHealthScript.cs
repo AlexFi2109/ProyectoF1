@@ -63,7 +63,7 @@ public class PlayerHealthScript : MonoBehaviour
     private IEnumerator DelaySceneChange()
     {
         yield return new WaitForSeconds(1.2f);
-        //SceneManager.LoadScene("17.- DeadScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("DeadScene", LoadSceneMode.Single);
     }
 
     

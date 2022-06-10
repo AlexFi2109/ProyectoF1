@@ -9,6 +9,18 @@ EditorBuildSettings:
     path: Assets/Scenes/samplescene.unity
     guid: cbfe36cfddfde964d9dfce63a355d5dd
   - enabled: 1
+    path: Assets/Scenes/Escenas/EkkaiaMenuScene.unity
+    guid: f02aeb4b0311fad4e81890679548a2d3
+  - enabled: 1
     path: Assets/Scenes/Scene-Village.unity
     guid: f0d65529f99a457448be8c8cc4e26477
+  - enabled: 1
+    path: Assets/Scenes/Escenas/CreditsScene.unity
+    guid: 1c7269a39f154374596d5546b230a8cb
+  - enabled: 1
+    path: Assets/Scenes/Escenas/DeadScene.unity
+    guid: f0661707495725e4a9c7d265801fce35
+  - enabled: 1
+    path: Assets/Scenes/Escenas/ControlScene.unity
+    guid: 5754a11937c10c94c9a11fbf9bc8b7e4
   m_configObjects: {}
