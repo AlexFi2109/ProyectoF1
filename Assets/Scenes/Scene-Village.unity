@@ -7231,7 +7231,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1682469354, guid: d2e242fa9f4e3e94a8062732abae2fb1, type: 3}
       propertyPath: energyNeededToShoot
-      value: 10
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1821665477934759274, guid: d2e242fa9f4e3e94a8062732abae2fb1,
         type: 3}
