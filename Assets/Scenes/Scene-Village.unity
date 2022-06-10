@@ -970,7 +970,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 6, y: 0.7}
-  m_SizeDelta: {x: 746.47766, y: 106.49708}
+  m_SizeDelta: {x: 560.9, y: 106.49708}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &88779187
 MonoBehaviour:
@@ -1975,7 +1975,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 6, y: 0.7}
-  m_SizeDelta: {x: 746.47766, y: 106.49708}
+  m_SizeDelta: {x: 537.2, y: 106.49708}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &348237620
 MonoBehaviour:
@@ -2919,7 +2919,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &527825954
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3175,6 +3175,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FirstEnemy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884493289661612990, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f65cd5775b8e4ad4c8fad5c56c364cb2, type: 3}
@@ -4186,6 +4191,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FirstEnemy (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884493289661612990, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f65cd5775b8e4ad4c8fad5c56c364cb2, type: 3}
@@ -6926,7 +6936,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 6, y: 0.7}
-  m_SizeDelta: {x: 746.47766, y: 106.49708}
+  m_SizeDelta: {x: 489.3, y: 106.49708}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1115600067
 MonoBehaviour:
@@ -8163,8 +8173,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -157}
-  m_SizeDelta: {x: 0.00012207031, y: -309.48413}
+  m_AnchoredPosition: {x: 5.700012, y: -129.8}
+  m_SizeDelta: {x: -157.04907, y: -309.48413}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1404362323
 MonoBehaviour:
@@ -9188,7 +9198,7 @@ PrefabInstance:
     - target: {fileID: 3064107404274312482, guid: 0614ea00c21ae3e4b8930080b8cd3004,
         type: 3}
       propertyPath: damageArrow
-      value: 5
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 3064107404274312482, guid: 0614ea00c21ae3e4b8930080b8cd3004,
         type: 3}
@@ -9845,6 +9855,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: FirstEnemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7884493289661612990, guid: f65cd5775b8e4ad4c8fad5c56c364cb2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f65cd5775b8e4ad4c8fad5c56c364cb2, type: 3}
 --- !u!4 &1525701130 stripped
@@ -10119,7 +10134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8bcf56e26b39d740ad3386d24d79a66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playersHealth: 100
+  playersHealth: 300
   energy: 100
   lifeBar: {fileID: 1593289099}
   energyBar: {fileID: 1632386861}
@@ -11104,7 +11119,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 6, y: 0.7}
-  m_SizeDelta: {x: 746.47766, y: 106.49708}
+  m_SizeDelta: {x: 525.9, y: 106.49708}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1662755916
 MonoBehaviour:
@@ -12506,8 +12521,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: 0.7}
-  m_SizeDelta: {x: 746.47766, y: 106.49708}
+  m_AnchoredPosition: {x: 2.6, y: 0.7}
+  m_SizeDelta: {x: 548.459, y: 106.49708}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1993100889
 MonoBehaviour:
