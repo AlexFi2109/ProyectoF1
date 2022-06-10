@@ -7,11 +7,19 @@ public class EnemyDamageScript : MonoBehaviour
     public int damageToPlayer=10;
     public GameObject player;
 
+    void Start()
+    {
+        
+        player = GameObject.Find("Xaya");
+        
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag=="Player")
         {
-            player.GetComponent<XayaHealthScript>().playerHealth-= damageToPlayer;
+            player.GetComponent<PlayerHealthScript>().DamagePlayer(damageToPlayer);
+            
         }        
     }
 
