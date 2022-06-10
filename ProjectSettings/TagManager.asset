@@ -17,6 +17,8 @@ TagManager:
   - Txt3
   - Txt4
   - Txt5
+  - Txt6
+  - Gate
   layers:
   - Default
   - TransparentFX

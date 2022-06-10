@@ -11,7 +11,7 @@ public class ControlAudiosXayaScript : MonoBehaviour
     void Start()
     {
         controlAudio = GetComponent<AudioSource>();
-        controlAudio.PlayOneShot(audios[0], 0.5f); //MusicaInicio
+        controlAudio.PlayOneShot(audios[0],0.5f); //MusicaInicio
     }
 
     // Update is called once per frame
@@ -22,6 +22,7 @@ public class ControlAudiosXayaScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.CompareTag("Txt2"))
         {
             controlAudio.PlayOneShot(audios[1], 0.5f); //MusicaPeleaenemigos
@@ -37,6 +38,7 @@ public class ControlAudiosXayaScript : MonoBehaviour
         }
         else if (other.CompareTag("Txt6"))
         {
+            controlAudio.Stop();
             controlAudio.PlayOneShot(audios[4], 0.5f); //MusicaPeleaJefeFinal
         }
 

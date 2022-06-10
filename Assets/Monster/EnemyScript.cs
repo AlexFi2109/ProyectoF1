@@ -7,9 +7,10 @@ public class EnemyScript : MonoBehaviour
     public int caso, damage;
     public Animator animator;
     public float contador, vida, damageArrow, damageSword, speed;
-
+    
 
     public GameObject objetivo;
+    public GameObject puerta;
     private AudioSource controlAudio;
     private int a=0;
     [SerializeField] private AudioClip[] audios;
@@ -20,6 +21,7 @@ public class EnemyScript : MonoBehaviour
         controlAudio = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
         objetivo = GameObject.Find("Xaya");
+        puerta = GameObject.Find("Gate");
         controlAudio.PlayOneShot(audios[1], 0.5f); //Grito
     }
 
@@ -37,6 +39,7 @@ public class EnemyScript : MonoBehaviour
         
         if (vida <= 0)
         {
+            puerta.GetComponent<DestroyGateScript>().destroygate = true;
             animator.SetBool("AttackPunch", false);
             animator.SetBool("AttackFlip", false);
             animator.SetBool("AttackPunch2", false);
@@ -49,6 +52,7 @@ public class EnemyScript : MonoBehaviour
             controlAudio.mute = true;
             GetComponent<FadeOutScript>().Explode(5);
             StartCoroutine(Esperar(5));
+            
 
         }
         else if(Vector3.Distance(transform.position, objetivo.transform.position)<50)
